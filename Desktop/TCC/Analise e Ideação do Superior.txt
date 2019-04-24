@@ -1,0 +1,88 @@
+SISPAC
+Ocio crivativo
+
+--Primeiras impressões:
+*A maioria estava pensando nas tecnologias que seriam utilizadas 
+*durante o desenvolvimento (diagramas de classe, tecnologias de programação)
+*Poucos pensaram no problema em si
+--Analise de perguntas e requisitos
+<!--Inicio das "vars"-->
+--Pergunta
+-Ideias
+<!--fim-->
+-Sistema de Chat
+-Guardar fontes de pesquisa para a analise do professor
+
+--Publico alvo -> Orientando, Orientador,co-orientador e Stakeholders
+--O foco do trabalho é apenas para Software?
+Não, para qualquer tipo de pesquisa
+-Agenda de compromissos
+
+--Qual foi a motivação para tomar essa iniciativa?
+A falta de planejamento do projeto, que tornam o produto inoperacional ou inutil
+uma organização de projeto pode garantir a qualidade do produto final 
+
+--Devemos levar em consideração a forma presencial durante o planejamento de projetos?
+Sim, porém grandes problemas nas relações humanas rotineiras acabam impossibilitando
+a presença fisica do orientador e aluno.Claro, essas relações são essenciais, porém
+a ferramenta deve auxiliar e facilitar esse contato, sem desprezar essas relações.
+
+Consequências 
+
+-Frustração do Aluno 
+-A instituição paga pela falta de softwares mal desenvolvidos
+-O mercado perde um software com ideias interessantes, mas, pela falta de implementação
+o produto acaba sendo inutil
+
+Quais as ideias de solução para o problema
+
+-Chamar orientador para beber no bar
+-Cavalaria
+-Pombo correio
+
+-Google Drive
+Falta de cronogramas e ambiente de discussão
+
+-SharelateX
+Complicado e poucas pessoas usam.
+
+-TRELA
+Comunicação complicada
+
+-Google Classroom
+limitações com formulários, e é mais voltada para a sala de aula, para execução de 
+funções como "Lição de Casa"; Falta de Comunicação
+
+-Khan Academy
+Uma boa ferramenta a ser olhada
+
+Caracteristicas para resolver o problema
+
+-Dar visibilidade ao que é feito nas escolas (projetos, softwares ou pesquisas), como uma biblioteca de 
+ideias, com acesso a filtros para empresas com ideias de patente
+
+-Agenda interativa, onde o orientador pode ter acesso as etapas do projeto e qual parte dos alunos está,
+e assim dar um comentário sobre o rendimento do aluno
+
+-Notificação
+
+-Uma função que indique que o orientador ou orientando leu o comentário
+
+-Multiplataforma
+
+-Escolher o local onde recebe as notificações (email || SMS... )
+
+-Separar os orientandos por cores, formas ou outros Templates
+
+-Categorizar as postagens de acordo com temas 
+
+-Chamadas de video
+
+-Esquema de Rank para professores
+
+-Incentivo com Bolsas
+
+-Filiação do orientador (instituição ao qual aluno pertence), o que pode implicar na escolha de um
+co-orientador que não pertence a instituição.
+
+-

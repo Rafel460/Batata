@@ -1,0 +1,84 @@
+1-
+
+2-
+A falta de uma metodologia/ferramenta que guie os alunos ao criar e desenvolver 
+um trabalho de conclusão de curso. Muitas vezes o aluno acaba "se perdendo" durante
+a sua pesquisa, o que faz com que ele se desanime durante esse importante processo,
+resultando em um rendimento prejudicado e consequentemente um trabalho sem inovação e
+sem grande importância.
+3-
+As consequencias de um trabalho não bem elaborado são várias: muitas falhas na
+pesquisa, devido ao fato de que o aluno "se perdeu" durante o desenvolvimento do trabalho
+- o que acaba resultando em um tempo de retrabalho muito grande, prejudicando 
+o tempo de pesquisa e desenvolvimento-.
+Um rendimento irregular, pois o aluno começa
+a sua pesquisa empolgado, mas após um certo tempo acaba se desanimando com sua pesquisa -ou seja, o rendimento cai-,
+e só quando está próximo do prazo de entrega o aluno retoma 
+o rendimento ao qual estava no inicio do trabalho.
+Um produto sem qualidade, já que a soma das consequências anteriores resulta em um trabalho mal desenvolvido,
+com um planejamento defasado e muitas vezes feito "as pressas", em decorrencia disso, resulta-se um produto final sem inovação e sem potencial
+4-
+Os atingidos por esse problema serão: O professor, que não conseguirá ajudar e acompanhar o desenvolvimento do aluno
+durante o trabalho, O aluno, que terá um trabalho mal desenvolvido e não conseguirá expressar uma solução concreta 
+para o tema tratado pela sua pesquisa, e por fim a sociedade, que perderá uma possivel pesquisa de relevância
+que ajudaria a resolver um problema que ainda não foi tratado.
+5-
+Uma solução seria criar uma metodologia que pudesse atrair os alunos de volta ao
+objetivo principal (que é o trabalho de conclusão de curso) de maneira que eles não
+se percam durante a pesquisa ou o desenvolvimento dos seus trabalhos, tudo isso atrelado a uma ferramenta
+que possa guiar os alunos, utilizando do auxilio dos professores e outros stakeholders e criando 
+metas para que o aluno não se esqueça do que deve fazer ou do que está fazendo, tudo isso de maneira interativa,
+com avaliações e sujestões do professor e do publico interessado no projeto.
+6-
+As características que a ideia apresentada acima deve ter são:
+*A metodologia deve levar em conta as dificuldades do aluno, podendo ter um tempo extendido para o aluno, caso ele tenha dificuldade para 
+fazer alguma tarefa, ou seja, se apresentar de maneira "agradável" ao aluno.
+*O professor e os demais Stakeholders devem trazer questionamentos relevantes ao aluno, ver em qual parte do desenvolvimento ele está, além de apresentar comentários e sujestões caso ocorra alguma 
+dificuldade ou empedimento ao aluno.
+*A metodologia pode apresentar a opinião de mais de um Stakeholder/Professor
+*A possível ferramenta deve ter uma interface simples, porém deve incrementar todas as características da metologia citada, para que o
+aluno possa desenvolver seu TCC de maneira mais dinâmica e os Professores e Stakeholders consigam avaliar ou dar suas observações.
+7-
+P or enquanto não encontrei nenhuma ferramenta semelhante
+8-
+Minha ferramenta está ligada a um tipo de métodologia próprio, ou seja, ela executa
+as ideias apresentadas nessa métodologia de maneira que o aluno não passe dificuldades
+ou não se perca durante o desenvolvimento do seu TCC, apresentando comentários e sujestões do professor e Stakeholders,
+de maneira simples e acompanhando o desenvolvimento pessoal do aluno, de acordo com as suas dificuldades, de maneira com que 
+o aluno esteja "preso" a um processo, se estressando pois não consegue resolver algo, ao contrário disso, esta ferramenta conta
+com a avaliação e auxilio do professor(es) e Stakeholder(s) envolvido(s).
+9-
+O meu produto será usado como um auxilio durante a execução do meu TCC, separando o meu objetivo final em pequenas partes
+e contando com as avaliações do meu Professor e de um ou mais Stakeholders,que me guiarão sempre que necessário, já que 
+eu poderei receber ou mandar questionamentos/observações para eles, caso sinta alguma dificuldade, posso pedir para que 
+o Professor aumente o tempo de entrega de uma tarefa, ou marcar um dia para que possamos nos reunir (tanto eu e o professor, como eu o professor e o Stakeholder),
+O professor e o Stakeholder podem me lembrar de entregar alguma tarefa, caso percebam que eu estive parado, ou simplesmente marcarem uma conversa caso percebam que
+pareço desinteressado.
+10-
+Um trabalho melhor desenvolvido, pois em sua construção as dificuldades 
+e as duvidas do aluno foram levadas em conta, fazendo com que o aluno não se desinteressasse pelo seu trabalho
+consequentemente mantendo um rendimento contínuo e tornando o TCC uma experência mais agradável e dinâmica, além de um trabalho
+que atende as necessidades da sociedade, pois as sujestões de Stakeholders estão sendo levadas em consideração pelo aluno
+11-
+Uma dificuldade que provavelmente será enfrentada pelo usuário é a de manter um rendimento estável, sem perder
+o interesse pelo trabalho de conclusão de curso.
+
+12-
+O erro mais comum a ser pensado é o de o aluno acabar se desinteressando do seu TCC, algo que
+será resolvido através de reuniões com o Professor, Stakeholder e aluno.
+
+13-
+Caso converse com um professor:
+*O(A) senhor(a) possui algum orientando de TCC?
+*O(A) senhor(a) já sentiu que seu orientando ficou "perdido" durante a pesquisa?
+*O(A) senhor(a) acharia interessante uma ferramenta em que o senhor pudesse verificar em qual
+parte do TCC o seu aluno está, e pudesse dar sujestões, ajudando o aluno a não se desfocar do
+objetivo principal, aumentando o seu desenpenho?
+
+
+
+
+
+ 
+  
+
