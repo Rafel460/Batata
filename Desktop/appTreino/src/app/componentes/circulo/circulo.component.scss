@@ -1,0 +1,45 @@
+ion-content{
+  --background : #9999FF;
+}
+ion-title{
+  text-align: center;
+}
+ion-toolbar{
+  --background : #0033FF;
+}
+.botaocentro{
+  margin-left: 62px;
+ion-button{
+  --background : green;
+  --background-focused : red;
+  --background-activated : white;
+  --color-activated : black;
+}
+}
+  .centralizarbotao2{
+    margin-left : 54px;
+    ion-button{
+      --background : green;
+      --color-activated : black;
+      --background-activated : white;
+    }
+  }
+.tituloprincipal{
+  text-align: center;
+}
+.explicacao{
+  text-align: center;
+}
+h4{
+  font-style: oblique;
+  text-align: center;
+}
+ion-input{
+  --padding-bottom : -100px;
+    margin-left: 95px;
+    margin-top : -36px;
+}
+.cenralizaae{
+  text-align: center;
+
+}

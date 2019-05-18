@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-button href = "triangulo" size = "small">Triangulo</ion-button>
+      <ion-button href = "circulo" size = "small">Círculo</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h1 class = "tituloprincipal">Área do Quadrado</h1>
+  <p class = "explicacao">Um quadrado possui todos os lados iguais e é uma figura plana,
+   <br>mas esta forma geométrica deve ter todos os seus ângulos iguais a 90º para podermos
+   <br>calcular exatamente qual o espaço que ele ocupa em uma determina área, e a essa area é dada a fórmula</p>
+  <h4>L*L ou L²</h4>
+  <br>
+  <img src="../../assets/imagens/area-do-quadrado.jpg" alt="area de um quadrado">
+  <br>
+  <h2>Vamos calcular a área do Quadrado?</h2>
+  <br>
+  <h3>Lado (L) =  <ion-input [(ngModel)] = "lado"></ion-input></h3>
+  <br>
+  <div class = "botaocentro">
+    <ion-button (click) = "calcularArea()"> Calcular Área! </ion-button>
+  </div>
+  <br>
+  <p class = "centralizaae">O valor da area é de [{{area}}]</p>
+  <br>
+  <div class="centralizarbotao2">
+    <ion-button href = "home">Voltar ao Título </ion-button>
+  </div>
+</ion-content>
+<ion-footer>
+</ion-footer>
