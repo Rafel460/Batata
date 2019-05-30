@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      appVotação
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h3>Insira suas credenciais</h3> <br>
+    <div class="Cadastro">
+      <h5>Nome: </h5>  <br>
+      <ion-input [(ngModel)] = "nome" position = "stacked" placeholder = "Insira o nome aqui" class = "campo1"></ion-input> <br>
+      <h5>Senha: </h5> <br>
+      <ion-input [(ngModel)] = "senha" type = "password" placeholder = "Insira a senha aqui"></ion-input>
+    </div>
+    <ion-button class = "botao_entrar">Entrar!</ion-button><br>
+    <h6>Não possui conta ainda? <a href="cadastro">Inscreva-se!</a></h6>
+
+
+</ion-content>
