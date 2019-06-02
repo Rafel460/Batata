@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
   templateUrl : 'cadastro.component.html'
 })
 export class CadastroComponent{
+nome : String;
+senha : String;
+senha_confirmacao : String;
+  cadastrar():void{
+
+
+
+  }
 
 
 }

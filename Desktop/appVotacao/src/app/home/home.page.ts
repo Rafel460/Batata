@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+nome : String;
+senha : String;
 
-  constructor() {}
+  fazerLogin():void{
+      alert("Cadastro Efetuado com sucesso!");
+
+  }
 
 }

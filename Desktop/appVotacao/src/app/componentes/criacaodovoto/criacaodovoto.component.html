@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      appVotação
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h3>Unforme seus Dados: </h3> <br>
+    <div class="Opcoes_votacao">
+      <h5>Nome da Votação: </h5>  <br>
+      <ion-input [(ngModel)] = "nome" position = "stacked" placeholder = "Insira o nome aqui" class = "campo1"></ion-input> <br>
+      <h5>Senha da Votação: </h5> <br>
+      <ion-input [(ngModel)] = "senha" type = "password" placeholder = "Insira a senha aqui"></ion-input>
+    </div>
+    <h5>Opções : </h5>
+    <ol>
+      <h5>Opção 1</h5> <ion-input  placeholder = "Insira aqui"></ion-input> <br>
+      <h5>Opção 2</h5> <ion-input  placeholder = "Insira aqui"></ion-input> <br>
+      <h5>Opção 3</h5> <ion-input  placeholder = "Insira aqui"></ion-input> <br>
+      <h5>Opção 4</h5> <ion-input  placeholder = "Insira aqui"></ion-input>
+    </ol>
+    <ion-button class = "Botao_Criar" href = "votacoes">Criar Votação!</ion-button><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</ion-content>

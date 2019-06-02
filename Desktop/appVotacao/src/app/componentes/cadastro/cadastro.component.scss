@@ -1,1 +1,50 @@
 
+
+
+h4{
+  text-align: center;
+  font-family: comic-sans;
+}
+
+.Registro{
+  text-align: center;
+  margin-top : -20px;
+    ion-input{
+      margin-top : -25px;
+      --padding-start : 70px;
+      --padding-end : 70px;
+    }
+    h5{
+      margin-right: 200px;
+      margin-top : 50px;
+    }
+
+
+}
+.titulo1{
+  margin-top : -20px;
+  margin-left : 35px;
+
+}
+.campo1{
+  margin-top : -10px;
+  --padding-start : 70px;
+  --padding-end : 70px;
+}
+
+.titulo2{
+  margin-top : -20px;
+  margin-left : 35px;
+}
+.campo2{
+  margin-top : 10px;
+  --padding-start : 70px;
+  --padding-end : 70px;
+}
+ion-button{
+  margin-top : 20px;
+  margin-left: 100px;
+  --background : brown;
+  --background-activated : white;
+  --color-activated : black;
+}
