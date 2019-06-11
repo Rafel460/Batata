@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AppVotação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4>Inicie o registro</h4>
+  <div class="Registro">
+      <h5>Nome</h5> <br>
+      <ion-input type = "text" [(ngModel)] = "usuario.nome" placeholder = "Insira o nome aqui"></ion-input><br>
+      <br>
+  </div>
+  <h5 class = "titulo2">Senha</h5>
+  <ion-input class = "campo2" type = "password" [(ngModel)] = "usuario.senha" placeholder = "Insira a senha aqui"></ion-input><br><br>
+  <h5 class = "titulo1">Confirme a senha</h5>
+  <ion-input class = "campo1" type = "password" [(ngModel)] = "confirmar_senha" placeholder = "Insira aqui"></ion-input><br><br>
+<ion-button (click) = "salvar()">Registrar</ion-button>
+
+</ion-content>
