@@ -15,8 +15,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {UsuarioSalvarComponent} from './usuario/usuario-salvar/usuario-salvar.component';
 import {VotacaoListarComponent} from './votacao/votacao-listar/votacao-listar.component';
+import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.component';
 @NgModule({
-  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent ],
+  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
     AngularFireModule.initializeApp({

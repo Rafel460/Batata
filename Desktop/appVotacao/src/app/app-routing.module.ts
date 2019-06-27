@@ -6,6 +6,7 @@ import { VotacaoComponent } from './componentes/votacao/votacao.component';
 import { UsuarioSalvarComponent } from './usuario/usuario-salvar/usuario-salvar.component';
 import { VotacaoSalvarComponent } from './votacao/votacao-salvar/votacao-salvar.component';
 import {VotacaoListarComponent} from './votacao/votacao-listar/votacao-listar.component';
+import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path : 'votar' , component : VotacaoComponent},
   { path: 'salvar_usuario' , component : UsuarioSalvarComponent },
   { path : 'criar_votacao' , component : VotacaoSalvarComponent },
+  { path : 'mostrar_usuarios' , component : UsuarioListarComponent},
 ];
 
 @NgModule({

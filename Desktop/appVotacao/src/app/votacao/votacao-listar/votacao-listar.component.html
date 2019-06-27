@@ -15,6 +15,7 @@
 
 <ion-content>
   <h4>Votações em discussão</h4> <ion-button class = "BotaoCriar" href = "criar_votacao">Criar!</ion-button> <br>
+  <ion-button href = "mostrar_usuarios">Ver usuarios Cadastrados</ion-button> 
   <ion-item *ngFor = "let votacao of listadevotacoes | async">
     <ion-label>{{votacao.nome}} <ion-button>Entrar</ion-button></ion-label>
   </ion-item>

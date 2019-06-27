@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      AppVotação
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5>Usuarios cadastrados</h5>
+  <ion-item *ngFor = "let usuario of listadeUsuarios | async">{{usuario.nome}}</ion-item>
+</ion-content>
