@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      appVotação
+      Informe seus Dados:
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <h3>Unforme seus Dados: </h3> <br>
+    <ion-button (click) = "votacaoListar()"><ion-icon name = "arrow-dropleft"></ion-icon></ion-button> <h2 class = "vamo_alinhar">Dados : </h2> <br>
     <div class="Opcoes_votacao">
       <h5>Nome da Votação: </h5>  <br>
       <ion-input [(ngModel)] = "votacao.nome" position = "stacked" placeholder = "Insira o nome aqui" class = "campo1"></ion-input> <br>

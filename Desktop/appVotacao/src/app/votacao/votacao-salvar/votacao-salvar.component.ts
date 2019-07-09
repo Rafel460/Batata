@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Votacao } from '../entidade/votacao';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-votacao-salvar',
@@ -10,7 +11,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 export class VotacaoSalvarComponent  {
   votacao : Votacao = new Votacao();
 
-  constructor(private banco : AngularFireDatabase) { }
+  constructor(private banco : AngularFireDatabase, private router : Router) { }
 
   ngOnInit() {}
 
@@ -19,6 +20,8 @@ export class VotacaoSalvarComponent  {
     this.votacao = new Votacao();
     alert("Pronto");
   }
-
+  votacaoListar(){
+    this.router.navigate(['votacoes']);
+  }
 
 }

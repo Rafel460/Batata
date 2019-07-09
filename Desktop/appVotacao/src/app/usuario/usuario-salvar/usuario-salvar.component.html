@@ -5,6 +5,11 @@
 </ion-header>
 
 <ion-content>
+    <script type="text/javascript">
+      alertar(){
+        alert('Olá mundo!');
+      }
+    </script>
   <h4>Inicie o registro</h4>
   <div class="Registro">
       <h5>Nome</h5> <br>
@@ -15,6 +20,6 @@
   <ion-input class = "campo2" type = "password" [(ngModel)] = "usuario.senha" placeholder = "Insira a senha aqui"></ion-input><br><br>
   <h5 class = "titulo1">Confirme a senha</h5>
   <ion-input class = "campo1" type = "password" [(ngModel)] = "confirmar_senha" placeholder = "Insira aqui"></ion-input><br><br>
-<ion-button (click) = "salvar()" href = "home">Registrar</ion-button>
+<ion-button (click) = "salvar()" click = "alertar()" href = "home">Registrar</ion-button>
 
 </ion-content>
