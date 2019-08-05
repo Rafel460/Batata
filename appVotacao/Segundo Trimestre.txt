@@ -1,0 +1,11 @@
+Datas do segundo Trimestre 
+
+05/08 -> Aula de Controle de Login
+
+12/08 -> Cadastro com associação
+
+-------------------------------------
+
+*Replicar os conceitos passados na aula no projeto
+
+*Compreender e implementar outras fincionalidades

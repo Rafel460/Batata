@@ -1,0 +1,37 @@
+ion-toolbar{
+  --background : #CDAF95;
+}
+ion-content{
+  --background : #CDB38B;
+}
+h3{
+  font-family: comic-sans;
+  text-align: center;
+}
+
+
+.Cadastro{
+  text-align: center;
+  margin-top : -20px;
+  h5{
+    margin-right : 200px;
+  }
+  ion-input{
+    margin-top: -30px;
+  --padding-start : 70px;
+  --padding-end : 70px;
+  --padding-bottom : 10px;
+  --background-size: 70px;
+  --placeholder-opacity : 12px;
+  }
+}
+.botao_entrar{
+  margin-top : 20px;
+  margin-left: 95px;
+  --background : brown;
+  --color-activated : black;
+  --background-activated : white;
+}
+h6{
+  text-align: center;
+}
