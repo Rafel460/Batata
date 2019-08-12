@@ -16,6 +16,12 @@
   <ion-input class = "campo2" type = "password" [(ngModel)] = "usuario.senha" placeholder = "Insira a senha aqui"></ion-input><br><br>
   <h5 class = "titulo1">Confirme a senha</h5>
   <ion-input class = "campo1" type = "password" [(ngModel)] = "confirmar_senha" placeholder = "Insira aqui"></ion-input><br><br>
+  <h5 class = "titulo1">Cidade</h5>
+  <ion-input class = "campo2" [(ngModel)] = "cidade.nome" placeholder = "Insira a senha aqui"></ion-input><br><br>
+  <h5 class = "titulo1">Estado e sigla</h5>
+  <ion-select [(ngModel)] = "cidade.estado">
+    <ion-select-option *ngFor = 'let estado of listaEstado | async' [value] = "estado">{{estado.nome}}</ion-select-option>
+  </ion-select>
 <ion-button (click) = "salvar()">Registrar</ion-button>
 
 </ion-content>
