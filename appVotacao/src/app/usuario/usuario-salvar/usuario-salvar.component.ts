@@ -5,6 +5,9 @@ import {Router} from '@angular/router';
 import {AngularFireDatabase} from '@angular/fire/database';
 import { Cidade } from '../../cidade/entidade/cidade';
 import { Estado } from '../../estado/entidade/estado';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-usuario-salvar',
   templateUrl: './usuario-salvar.component.html',
@@ -13,21 +16,26 @@ import { Estado } from '../../estado/entidade/estado';
 })
 export class UsuarioSalvarComponent implements OnInit {
 
+  listaEstado :Observable<Estado[]>;
   usuario : Usuario = new Usuario();
   cidade : Cidade = new Cidade();
   confirmar_senha : string;
 
-  constructor(private autenticacao : AngularFireAuth, private router : Router, private banco : AngularFireDatabase) { }
+  constructor(private autenticacao : AngularFireAuth, private router : Router, private banco : AngularFireDatabase) {
+    this.listaEstado = this.banco.list<Estado>('estado').snapshotChanges().pipe(
+      map(
+        lista => lista.map( linha => ({key : linha.payload.key, ... linha.payload.val() })))
+      );}
+
 
   ngOnInit() {}
 
   salvar(){
 
-  
+
     this.banco.list('cidade').push(this.cidade);
     this.banco.list('usuario').push(this.usuario);
     this.autenticacao.auth.createUserWithEmailAndPassword(this.usuario.nome, this.usuario.senha).then(
     () => {this.router.navigate(['home']);}).catch((erro) => alert('erro'))
   }
-
 }
