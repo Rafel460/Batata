@@ -16,13 +16,13 @@ import { map } from 'rxjs/operators';
 })
 export class UsuarioSalvarComponent implements OnInit {
 
-  listaEstado :Observable<Estado[]>;
+  listaCidade :Observable<Cidade[]>;
   usuario : Usuario = new Usuario();
-  cidade : Cidade = new Cidade();
+
   confirmar_senha : string;
 
   constructor(private autenticacao : AngularFireAuth, private router : Router, private banco : AngularFireDatabase) {
-    this.listaEstado = this.banco.list<Estado>('estado').snapshotChanges().pipe(
+    this.listaCidade = this.banco.list<Cidade>('cidade').snapshotChanges().pipe(
       map(
         lista => lista.map( linha => ({key : linha.payload.key, ... linha.payload.val() })))
       );}
@@ -31,9 +31,6 @@ export class UsuarioSalvarComponent implements OnInit {
   ngOnInit() {}
 
   salvar(){
-
-
-    this.banco.list('cidade').push(this.cidade);
     this.banco.list('usuario').push(this.usuario);
     this.autenticacao.auth.createUserWithEmailAndPassword(this.usuario.nome, this.usuario.senha).then(
     () => {this.router.navigate(['home']);}).catch((erro) => alert('erro'))

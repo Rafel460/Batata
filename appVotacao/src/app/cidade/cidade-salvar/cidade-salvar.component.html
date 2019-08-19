@@ -1,3 +1,7 @@
-<p>
-  cidade-salvar works!
-</p>
+<h5>Coloque a cidade</h5>
+<ion-input [(ngModel)] = "cidade.nome"></ion-input>
+<h5>Coloque informe o estado</h5>
+<ion-select [(ngModel)] = "cidade.estado">
+  <ion-select-option *ngFor = 'let estado of listaEstado | async' [value] = "estado">{{estado.nome}}</ion-select-option>
+</ion-select>
+<ion-button (click) = "salvar()">Voltar ao registro </ion-button>
