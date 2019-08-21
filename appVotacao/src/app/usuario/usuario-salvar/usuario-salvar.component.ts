@@ -33,6 +33,6 @@ export class UsuarioSalvarComponent implements OnInit {
   salvar(){
     this.banco.list('usuario').push(this.usuario);
     this.autenticacao.auth.createUserWithEmailAndPassword(this.usuario.nome, this.usuario.senha).then(
-    () => {this.router.navigate(['home']);}).catch((erro) => alert('erro'))
+    () => {this.router.navigate(['home']);}).catch((erro) => this.router.navigate(['home']) )
   }
 }

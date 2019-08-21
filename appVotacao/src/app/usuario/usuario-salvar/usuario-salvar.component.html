@@ -8,7 +8,7 @@
 
   <h4>Inicie o registro</h4>
   <div class="Registro">
-      <h5>Nome</h5> <br>
+      <h5>Email</h5> <br>
       <ion-input type = "text" [(ngModel)] = "usuario.nome" placeholder = "Insira o nome aqui"></ion-input><br>
       <br>
   </div>
@@ -20,7 +20,6 @@
   <ion-select [(ngModel)] = "usuario.cidade">
     <ion-select-option *ngFor = 'let cidade of listaCidade | async' [value] = "cidade">{{cidade.nome}}</ion-select-option>
   </ion-select>
-  <a href="salvar_cidade">Cadastrar cidades</a>
 <ion-button (click) = "salvar()">Registrar</ion-button>
 
 </ion-content>

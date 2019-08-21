@@ -16,10 +16,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {UsuarioSalvarComponent} from './usuario/usuario-salvar/usuario-salvar.component';
 import {VotacaoListarComponent} from './votacao/votacao-listar/votacao-listar.component';
 import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.component';
-
+import { CidadeSalvarComponent } from './cidade/cidade-salvar/cidade-salvar.component';
 
 @NgModule({
-  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent],
+  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
     AngularFireModule.initializeApp({
