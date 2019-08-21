@@ -17,9 +17,9 @@ import {UsuarioSalvarComponent} from './usuario/usuario-salvar/usuario-salvar.co
 import {VotacaoListarComponent} from './votacao/votacao-listar/votacao-listar.component';
 import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.component';
 import { CidadeSalvarComponent } from './cidade/cidade-salvar/cidade-salvar.component';
-
+import { UsuarioRedefinirComponent } from './usuario/usuario-redefinir/usuario-redefinir.component';
 @NgModule({
-  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent],
+  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent, UsuarioRedefinirComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
     AngularFireModule.initializeApp({

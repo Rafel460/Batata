@@ -19,5 +19,5 @@ export class HomePage {
     this.autenticacao.auth.signInWithEmailAndPassword(this.usuario.nome, this.usuario.senha).then(
       () => { this.router.navigate(['votacoes']); }).catch((erro) => alert('Ocorreu um erro de autenticação'));
   }
-
+  
 }
