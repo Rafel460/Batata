@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./votacao-listar.component.scss'],
 })
 export class VotacaoListarComponent implements OnInit {
+
   listadevotacoes : Observable<Votacao[]>;
   constructor(private banco : AngularFireDatabase, private router : Router) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
@@ -25,6 +26,9 @@ export class VotacaoListarComponent implements OnInit {
   }
   listarUsuarios(){
     this.router.navigate(['mostrar_usuarios']);
+  }
+  excluir(key : String){
+    this.banco.list('votacao').remove(key);
   }
 
 }
