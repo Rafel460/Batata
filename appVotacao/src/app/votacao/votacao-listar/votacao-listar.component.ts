@@ -27,7 +27,7 @@ export class VotacaoListarComponent implements OnInit {
   listarUsuarios(){
     this.router.navigate(['mostrar_usuarios']);
   }
-  excluir(key : String){
+  excluir(key : string){
     this.banco.list('votacao').remove(key);
   }
 
