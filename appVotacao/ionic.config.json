@@ -1,5 +1,7 @@
 {
   "name": "appVotacao",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
