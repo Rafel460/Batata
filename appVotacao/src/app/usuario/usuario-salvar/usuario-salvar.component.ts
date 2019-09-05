@@ -31,8 +31,13 @@ export class UsuarioSalvarComponent implements OnInit {
   ngOnInit() {}
 
   salvar(){
+    if(this.usuario.senha != this.confirmar_senha){
+      alert("Senhas não conferem, por favor, tente novamente");
+      this.router.navigate(['salvar_usuario']);
+    }else{
     this.banco.list('usuario').push(this.usuario);
     this.autenticacao.auth.createUserWithEmailAndPassword(this.usuario.nome, this.usuario.senha).then(
     () => {this.router.navigate(['home']);}).catch((erro) => this.router.navigate(['home']) )
+    }
   }
 }
