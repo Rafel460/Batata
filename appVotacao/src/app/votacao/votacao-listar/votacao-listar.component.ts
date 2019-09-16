@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import * as _ from 'lodash';
+import { MenuController} from '@ionic/angular';
 @Component({
   selector: 'app-votacao-listar',
   templateUrl: './votacao-listar.component.html',
@@ -16,7 +17,7 @@ export class VotacaoListarComponent implements OnInit {
   filtro  = {};
   votacoes : any;
   listadevotacoes : Observable<Votacao[]>;
-  constructor(private banco : AngularFireDatabase, private router : Router) {
+  constructor(private banco : AngularFireDatabase, private router : Router, private menu : MenuController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
       map( lista => lista.map( linha => ({
         key : linha.payload.key, ... linha.payload.val()
@@ -32,6 +33,7 @@ export class VotacaoListarComponent implements OnInit {
       }
     )
   }
+
   filtrar(){
     this.filtro['nome'] = val => val.includes(this.valor);
     this.listarFiltro = _.filter(this.votacoes, _.conforms(this.filtro));
@@ -46,4 +48,4 @@ export class VotacaoListarComponent implements OnInit {
     this.banco.list('votacao').remove(key);
   }
 
-}
+  }

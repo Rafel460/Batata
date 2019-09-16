@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+
   <h4>Votações em discussão</h4>
 
   <br>
@@ -20,15 +21,17 @@
         <ion-label>Criar Votação</ion-label>
       </ion-tab-button>
 
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Menu</ion-label>
+      </ion-tab-button>
+
       <ion-tab-button tab="Usuarios" (click) = "listarUsuarios()">
         <ion-icon name="people"></ion-icon>
         <ion-label>Usuarios Cadastrados</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="about">
-        <ion-icon name="information-circle"></ion-icon>
-        <ion-label>Sobre</ion-label>
-      </ion-tab-button>
+
     </ion-tab-bar>
   </ion-tabs>
 
