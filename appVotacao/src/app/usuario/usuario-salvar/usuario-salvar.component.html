@@ -7,7 +7,8 @@
 <ion-content>
 
   <h4>Inicie o registro</h4>
-  <div class="Registro">
+  <form>
+    <div class="Registro">
       <h5>Email</h5> <br>
       <ion-input type = "text" [(ngModel)] = "usuario.nome" placeholder = "Insira o nome aqui"></ion-input><br>
       <br>
@@ -17,6 +18,7 @@
   <h5 class = "titulo1">Confirme a senha</h5>
   <ion-input class = "campo1" type = "password" [(ngModel)] = "confirmar_senha" placeholder = "Insira aqui"></ion-input><br><br>
   <h5 class = "titulo1">Cidade</h5>
+</form>
   <ion-select [(ngModel)] = "usuario.cidade">
     <ion-select-option *ngFor = 'let cidade of listaCidade | async' [value] = "cidade">{{cidade.nome}}</ion-select-option>
   </ion-select>

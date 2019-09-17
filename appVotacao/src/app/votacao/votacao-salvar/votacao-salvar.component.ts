@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Votacao } from '../entidade/votacao';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
-import {ToastController} from '@ionic/angular';
-
+import {AlertController} from '@ionic/angular';
 @Component({
   selector: 'app-votacao-salvar',
   templateUrl: './votacao-salvar.component.html',
@@ -12,19 +11,22 @@ import {ToastController} from '@ionic/angular';
 export class VotacaoSalvarComponent  {
   votacao : Votacao = new Votacao();
 
-  constructor(private banco : AngularFireDatabase, private router : Router, private mensagem : ToastController) { }
+  constructor(private banco : AngularFireDatabase, private router : Router, private alerta : AlertController) { }
 
   ngOnInit() {}
-  async mostrarMensagem(){
-    const mensagem = await this.mensagem.create({
+  async mostrarAlerta(){
+    const alertar = await this.alerta.create({
+      header : 'Alerta',
       message : 'Votação criada com sucesso!',
-      duration : 2500
+      buttons : ['Ok']
     });
+    await alertar.present();
   }
   salvar(){
     this.banco.list('votacao').push(this.votacao);
     this.votacao = new Votacao();
-    mostrarMensagem();
+    this.mostrarAlerta();
+    this.router.navigate(['votacoes']);
   }
   votacaoListar(){
     this.router.navigate(['votacoes']);
