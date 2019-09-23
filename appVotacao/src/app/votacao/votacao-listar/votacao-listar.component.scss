@@ -19,3 +19,15 @@ ion-label{
 h4{
   text-align: center;
 }
+.menu-lateral{
+  --max-width : 200px;
+  ion-toolbar{
+    --background-color : #993399;
+  }
+}
+.Icone_user{
+  ion-label{
+    margin-left : 80px;
+    margin-top: 80px;
+  }
+}

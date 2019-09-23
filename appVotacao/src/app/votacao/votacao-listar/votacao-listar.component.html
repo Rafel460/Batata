@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar type = "search" placeholder="Filtrar Votações" [(ngModel)] = "valor" (ionChange) = "filtrar()"></ion-searchbar>
+    <ion-searchbar type="search" placeholder="Filtrar Votações" [(ngModel)]="valor" (ionChange)="filtrar()"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -9,26 +9,26 @@
   <h4>Votações em discussão</h4>
 
   <br>
-  <ion-item *ngFor = "let votacao of listarFiltro">
+  <ion-item *ngFor="let votacao of listarFiltro">
     <ion-label>{{votacao.nome}} </ion-label>
-      <ion-button (click) = "mostrarAlerta(votacao)">Entrar</ion-button>
-      <ion-button href = "votacoes" (click) = "excluir(votacao.key)">
+    <ion-button (click)="mostrarAlerta(votacao)">Entrar</ion-button>
+    <ion-button href="votacoes" (click)="excluir(votacao.key)">
       <ion-icon name="trash"></ion-icon>
     </ion-button>
   </ion-item>
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule" (click) = "criarVotacao()">
+      <ion-tab-button tab="schedule" (click)="criarVotacao()">
         <ion-icon name="add-circle"></ion-icon>
         <ion-label>Criar Votação</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="about" (click) = "abrirMenu()">
+      <ion-tab-button tab="about" (click)="abrirMenu()">
         <ion-icon name="information-circle"></ion-icon>
         <ion-label>Menu</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="Usuarios" (click) = "listarUsuarios()">
+      <ion-tab-button tab="Usuarios" (click)="listarUsuarios()">
         <ion-icon name="people"></ion-icon>
         <ion-label>Usuarios Cadastrados</ion-label>
       </ion-tab-button>
@@ -36,19 +36,24 @@
   </ion-tabs>
 
 
-  <ion-menu side = "start">
-            <ion-header>
-              <ion-toolbar color="tertiary">
-                <ion-title>Menuzim maneiro</ion-title>
-              </ion-toolbar>
-            </ion-header>
-            <ion-content>
-                <ion-list>
-                    <ion-item>nome</ion-item>
-                </ion-list>
-            </ion-content>
-</ion-menu>
-<ion-router-outlet main></ion-router-outlet>
+  <ion-menu side="start" class="menu-lateral">
+    <ion-header>
+      <ion-toolbar>
+        <div class="Icone_user">
+          <ion-avatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+          <ion-label>Chip Avatar</ion-label>
+          </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <h4>Usuario</h4><br>
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
 
 
 </ion-content>
