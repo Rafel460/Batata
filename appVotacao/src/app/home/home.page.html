@@ -8,16 +8,27 @@
 
 <ion-content>
   <img src="../../assets/icon/imagem_de_titulo.jpg" alt="imagem_de_titulo">
+  <form #formulario = "ngForm">
     <h3>Insira suas credenciais</h3> <br>
     <div class="Cadastro">
+
       <h5>Nome: </h5>  <br>
-      <ion-input [(ngModel)] = "usuario.nome" position = "stacked" placeholder = "Insira o nome aqui" class = "campo1"></ion-input> <br>
+      <ion-input #nome = "ngModel" [(ngModel)] = "usuario.nome" name = "nome" position = "stacked" placeholder = "Insira o nome aqui" class = "campo1"></ion-input> <br>
+
+      <span style='color:red; font-size: 10px; margin-left:140px; ' *ngIf="nome.errors && nome.touched">
+        <ion-label [hidden]='nome.error.required'>O nome é obrigatório!</ion-label>
+        </span>
+
       <h5>Senha: </h5> <br>
-      <ion-input [(ngModel)] = "usuario.senha" type = "password" placeholder = "Insira a senha aqui"></ion-input>
+      <ion-input #senha = "ngModel" [(ngModel)] = "usuario.senha" name = "senha" type = "password" placeholder = "Insira a senha aqui"></ion-input>
+
+      <span style='color:red; font-size: 10px; margin-left:140px; ' *ngIf="senha.errors && senha.touched">
+        <ion-label [hidden]='senha.error.required'>A senha é obrigatória!</ion-label>
+        </span>
     </div>
-    <ion-button class = "botao_entrar" (click)= "fazerLogin()">Entrar!</ion-button><br>
+    <ion-button class = "botao_entrar" [disabled]='!formulario.form.valid' (click)= "fazerLogin()">Entrar!</ion-button><br>
     <h6>Não possui conta ainda? <a href="salvar_usuario">Inscreva-se!</a></h6> <br>
     <h6>Esqueceu a senha? <a href="redefinir_senha"> Clique aqui</a></h6>
-
+ </form>
 
 </ion-content>
