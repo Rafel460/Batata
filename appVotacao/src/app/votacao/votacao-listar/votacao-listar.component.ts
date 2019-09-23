@@ -39,7 +39,7 @@ export class VotacaoListarComponent implements OnInit {
    }
 
    abrirMenu(){
-     this.menu.open('start');
+     this.menu.open();
    }
   ngOnInit() {
     this.listadevotacoes.subscribe(
