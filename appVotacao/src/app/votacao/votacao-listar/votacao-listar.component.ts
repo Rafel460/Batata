@@ -8,6 +8,9 @@ import * as _ from 'lodash';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
 import { Usuario } from 'src/app/usuario/entidade/usuario';
+import {AngularFireAuth} from 'angularfire2/auth';
+import {ModalController} from '@ionic/angular';
+import {VotacaoSalvarComponent} from '../votacao-salvar/votacao-salvar.component';
 @Component({
   selector: 'app-votacao-listar',
   templateUrl: './votacao-listar.component.html',
@@ -22,7 +25,7 @@ export class VotacaoListarComponent implements OnInit {
   votacao: Votacao = new Votacao();
   usuario : Usuario = new Usuario();
 
-  constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController) {
+  constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController, private autenticacao : AngularFireAuth, private modal : ModalController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
       map(lista => lista.map(linha => ({
         key: linha.payload.key, ...linha.payload.val()
@@ -39,7 +42,12 @@ export class VotacaoListarComponent implements OnInit {
     await alert.present();
   }
 
-
+async alterarVotacao(votacao){
+  const tela = await this.modal.create({
+    component : VotacaoSalvarComponent, componentProps : {votacao : votacao}
+  });
+  tela.present();
+}
 
 
   abrirMenu() {
@@ -57,7 +65,10 @@ export class VotacaoListarComponent implements OnInit {
     this.filtro['nome'] = val => val.includes(this.valor);
     this.listarFiltro = _.filter(this.votacoes, _.conforms(this.filtro));
   }
-
+  logout(){
+    this.autenticacao.auth.signOut();
+    this.router.navigate(['home']);
+  }
 
   criarVotacao() {
     this.router.navigate(['criar_votacao']);

@@ -15,6 +15,9 @@
     <ion-button href="votacoes" (click)="excluir(votacao.key)">
       <ion-icon name="trash"></ion-icon>
     </ion-button>
+    <ion-button href="votacoes" (click)="alterarVotacao(votacao)">
+      <ion-icon name="build"></ion-icon>
+    </ion-button>
   </ion-item>
 
   <ion-tabs>
@@ -45,16 +48,17 @@
             <img src="../../assets/icon/g0ularte.png">
           </ion-avatar>
             <div class="nomedoUser">
-            <ion-label>User</ion-label>
+            <ion-label>{{usuario.nome}}</ion-label>
           </div>
+          <br>
           <br>
           <br>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-
-      <h4>Usuario</h4><br>
-
+        <ion-button expand = "full" (click) = "logout()">
+        <ion-label>Sair da sessão <ion-icon name="exit"></ion-icon> </ion-label>
+      </ion-button>
     </ion-content>
   </ion-menu>
   <ion-router-outlet main></ion-router-outlet>

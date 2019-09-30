@@ -18,6 +18,7 @@ import {VotacaoListarComponent} from './votacao/votacao-listar/votacao-listar.co
 import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.component';
 import { CidadeSalvarComponent } from './cidade/cidade-salvar/cidade-salvar.component';
 import { UsuarioRedefinirComponent } from './usuario/usuario-redefinir/usuario-redefinir.component';
+import {AngularFireAuth} from 'angularfire2/auth';
 @NgModule({
   declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent, UsuarioRedefinirComponent],
   entryComponents: [],
@@ -35,6 +36,7 @@ import { UsuarioRedefinirComponent } from './usuario/usuario-redefinir/usuario-r
   ],
   providers: [
     StatusBar,
+    AngularFireAuth,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

@@ -5,4 +5,5 @@ export class Votacao {
   opcao_2 : string;
   opcao_3 : string;
   senha : string;
+  key : any;
 }
