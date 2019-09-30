@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import * as _ from 'lodash';
 import { AlertController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
+import { Usuario } from 'src/app/usuario/entidade/usuario';
 @Component({
   selector: 'app-votacao-listar',
   templateUrl: './votacao-listar.component.html',
@@ -19,7 +20,8 @@ export class VotacaoListarComponent implements OnInit {
   votacoes: any;
   listadevotacoes: Observable<Votacao[]>;
   votacao: Votacao = new Votacao();
-  
+  usuario : Usuario = new Usuario();
+
   constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
       map(lista => lista.map(linha => ({
@@ -27,7 +29,6 @@ export class VotacaoListarComponent implements OnInit {
       })))
     );
   }
-
 
   async mostrarAlerta(votacao) {
     const alert = await this.alerta.create({
@@ -37,6 +38,9 @@ export class VotacaoListarComponent implements OnInit {
     });
     await alert.present();
   }
+
+
+
 
   abrirMenu() {
     this.menu.open();
@@ -53,9 +57,12 @@ export class VotacaoListarComponent implements OnInit {
     this.filtro['nome'] = val => val.includes(this.valor);
     this.listarFiltro = _.filter(this.votacoes, _.conforms(this.filtro));
   }
+
+
   criarVotacao() {
     this.router.navigate(['criar_votacao']);
   }
+
   listarUsuarios() {
     this.router.navigate(['mostrar_usuarios']);
   }

@@ -16,19 +16,21 @@
       <ion-icon name="trash"></ion-icon>
     </ion-button>
   </ion-item>
+
   <ion-tabs>
+
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule" (click)="criarVotacao()">
+      <ion-tab-button  (click)="criarVotacao()">
         <ion-icon name="add-circle"></ion-icon>
         <ion-label>Criar Votação</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="about" (click)="abrirMenu()">
+      <ion-tab-button  (click)="abrirMenu()">
         <ion-icon name="information-circle"></ion-icon>
         <ion-label>Menu</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="Usuarios" (click)="listarUsuarios()">
+      <ion-tab-button  (click) ="listarUsuarios()">
         <ion-icon name="people"></ion-icon>
         <ion-label>Usuarios Cadastrados</ion-label>
       </ion-tab-button>
@@ -39,12 +41,14 @@
   <ion-menu side="start" class="menu-lateral">
     <ion-header>
       <ion-toolbar>
-        <div class="Icone_user">
-          <ion-avatar>
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          <ion-avatar class = "imagem">
+            <img src="../../assets/icon/g0ularte.png">
           </ion-avatar>
-          <ion-label>Chip Avatar</ion-label>
+            <div class="nomedoUser">
+            <ion-label>User</ion-label>
           </div>
+          <br>
+          <br>
       </ion-toolbar>
     </ion-header>
     <ion-content>
