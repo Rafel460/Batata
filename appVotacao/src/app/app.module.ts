@@ -19,8 +19,9 @@ import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.co
 import { CidadeSalvarComponent } from './cidade/cidade-salvar/cidade-salvar.component';
 import { UsuarioRedefinirComponent } from './usuario/usuario-redefinir/usuario-redefinir.component';
 import {AngularFireAuth} from 'angularfire2/auth';
+
 @NgModule({
-  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent, UsuarioRedefinirComponent],
+  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent, UsuarioRedefinirComponent, VotacaoSalvarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
     AngularFireModule.initializeApp({
