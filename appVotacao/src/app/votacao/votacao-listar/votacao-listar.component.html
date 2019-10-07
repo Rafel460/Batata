@@ -10,13 +10,16 @@
 
   <br>
   <ion-item *ngFor="let votacao of listarFiltro">
-    <ion-label>{{votacao.nome}} </ion-label>
+    <ion-label>{{votacao.nome}} </ion-label><br>
     <ion-button (click)="mostrarAlerta(votacao)">Entrar</ion-button>
     <ion-button href="votacoes" (click)="excluir(votacao.key)">
       <ion-icon name="trash"></ion-icon>
     </ion-button>
     <ion-button (click)="alterarVotacao(votacao)">
       <ion-icon name="build"></ion-icon>
+    </ion-button>
+    <ion-button (click)="verResultado(votacao)">
+      <ion-icon name="eye"></ion-icon>
     </ion-button>
   </ion-item>
 
@@ -48,7 +51,7 @@
             <img src="../../assets/icon/g0ularte.png">
           </ion-avatar>
             <div class="nomedoUser">
-            <ion-label>{{usuario.nome}}</ion-label>
+            <ion-label>{{user}}</ion-label>
           </div>
           <br>
           <br>

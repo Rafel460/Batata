@@ -19,10 +19,10 @@ import {UsuarioListarComponent} from './usuario/usuario-listar/usuario-listar.co
 import { CidadeSalvarComponent } from './cidade/cidade-salvar/cidade-salvar.component';
 import { UsuarioRedefinirComponent } from './usuario/usuario-redefinir/usuario-redefinir.component';
 import {AngularFireAuth} from 'angularfire2/auth';
-
+import {ResultadoVotacaoComponent} from './votacao/resultado-votacao/resultado-votacao.component';
 @NgModule({
-  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent, UsuarioRedefinirComponent, VotacaoSalvarComponent],
-  entryComponents: [],
+  declarations: [AppComponent, TeladoVotoComponent, ResultadoComponent, VotacaoComponent, UsuarioSalvarComponent, VotacaoListarComponent, UsuarioListarComponent, CidadeSalvarComponent, UsuarioRedefinirComponent, VotacaoSalvarComponent, ResultadoVotacaoComponent],
+  entryComponents: [ResultadoVotacaoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyDQIDtmoWtVdIN5dcG5DvXpP01g8s7vSis",
