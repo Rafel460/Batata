@@ -27,6 +27,8 @@ export class VotacaoListarComponent implements OnInit {
   votacao: Votacao = new Votacao();
   usuario : Usuario = new Usuario();
   user: any;
+  botoes = [];
+
   constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController, private autenticacao : AngularFireAuth, private modal : ModalController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
       map(lista => lista.map(linha => ({
@@ -37,10 +39,20 @@ export class VotacaoListarComponent implements OnInit {
   }
 
   async mostrarAlerta(votacao) {
+    this.botoes[0] = votacao.opcao_1;
+    this.botoes[1] = votacao.opcao_2;
+    this.botoes[2] = votacao.opcao_3; 
     const alert = await this.alerta.create({
       header: votacao.nome,
       subHeader: 'selecione uma das opções',
-      buttons: [votacao.opcao_1, votacao.opcao_2, votacao.opcao_3],
+      buttons: [this.botoes[0], this.botoes[1], this.botoes[2], 'Fechar'/*, {
+        handler : data => {
+          if(this.botoes[0]){ // se desse pra usar um switch seria melhor
+            //tem que achar um método que verifique que o botão foi clicado
+          }
+        }
+      }*/
+    ],
     });
     await alert.present();
   }

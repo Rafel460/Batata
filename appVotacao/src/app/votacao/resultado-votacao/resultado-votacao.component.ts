@@ -3,6 +3,7 @@ import {Votacao} from '../entidade/votacao';
 import {AngularFireDatabase} from '@angular/fire/database';
 import {ModalController} from '@ionic/angular';
 import {NavController, NavParams} from '@ionic/angular';
+
 @Component({
   selector: 'app-resultado-votacao',
   templateUrl: './resultado-votacao.component.html',

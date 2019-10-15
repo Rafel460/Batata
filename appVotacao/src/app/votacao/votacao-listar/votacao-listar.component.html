@@ -10,7 +10,8 @@
 
   <br>
   <ion-item *ngFor="let votacao of listarFiltro">
-    <ion-label>{{votacao.nome}} </ion-label><br>
+    <ion-label>{{votacao.nome}} </ion-label><br><br>
+    
     <ion-button (click)="mostrarAlerta(votacao)">Entrar</ion-button>
     <ion-button href="votacoes" (click)="excluir(votacao.key)">
       <ion-icon name="trash"></ion-icon>
