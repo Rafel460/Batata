@@ -18,7 +18,7 @@
       <h5>Senha: </h5> <br>
       <ion-input [(ngModel)] = "usuario.senha" name = "senha" type = "password" placeholder = "Insira a senha aqui"></ion-input>
     </div>
-    <ion-button class = "botao_entrar" (click)= "fazerLogin()">Entrar!</ion-button>
+    <ion-button class = "botao_entrar" (click)= "fazerLogin(usuario.nome)">Entrar!</ion-button>
     <h6>Não possui conta ainda? <a href="salvar_usuario">Inscreva-se!</a></h6> 
     <h6>Esqueceu a senha? <a href="redefinir_senha"> Clique aqui</a></h6>
  </form>

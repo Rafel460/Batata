@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Votacao } from '../entidade/votacao';
 import { Observable } from 'rxjs';
@@ -28,7 +28,7 @@ export class VotacaoListarComponent implements OnInit {
   usuario : Usuario = new Usuario();
   user: any;
   botoes = [];
-
+  @Input() email : string;
   constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController, private autenticacao : AngularFireAuth, private modal : ModalController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
       map(lista => lista.map(linha => ({

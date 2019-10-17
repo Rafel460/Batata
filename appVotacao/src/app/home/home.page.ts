@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { Usuario } from '../usuario/entidade/usuario';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
+import {ModalController} from '@ionic/angular';
+import{NavController} from '@ionic/angular';
+import { VotacaoListarComponent } from '../votacao/votacao-listar/votacao-listar.component';
+import { ResultadoVotacaoComponent } from '../votacao/resultado-votacao/resultado-votacao.component';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -10,14 +14,25 @@ import { Router } from '@angular/router';
 
 export class HomePage {
   usuario: Usuario = new Usuario();
-  constructor(private router: Router, private autenticacao: AngularFireAuth) {
+  constructor(private router: Router, private autenticacao: AngularFireAuth, private verLista : ModalController) {
 
   }
 
+  async mostrarLista(valor){
+   
+    const tela = await this.verLista.create({
+      component : VotacaoListarComponent, componentProps : {
+        'email' : this.usuario.nome
+      }
+    });
+    await tela.present()
+  }
 
-  fazerLogin() {
+  fazerLogin(email) {
+  
     this.autenticacao.auth.signInWithEmailAndPassword(this.usuario.nome, this.usuario.senha).then(
-      () => { this.router.navigate(['votacoes']); }).catch((erro) => alert('Ocorreu um erro de autenticação'));
+      () => { this.mostrarLista(email) }).catch((erro) => alert('Ocorreu um erro de autenticação'));
+
   }
   
 }
