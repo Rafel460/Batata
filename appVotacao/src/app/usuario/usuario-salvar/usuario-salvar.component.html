@@ -7,21 +7,39 @@
 <ion-content>
 
   <h4>Inicie o registro</h4>
-  <form>
-    <div class="Registro">
-      <h5>Email</h5> <br>
-      <ion-input type = "text" [(ngModel)] = "usuario.nome" name = "nome" placeholder = "Insira o nome aqui"></ion-input><br>
-      <br>
-  </div>
-  <h5 class = "titulo2">Senha</h5>
-  <ion-input class = "campo2" type = "password" [(ngModel)] = "usuario.senha" name = "senha" placeholder = "Insira a senha aqui"></ion-input><br><br>
-  <h5 class = "titulo1">Confirme a senha</h5>
-  <ion-input class = "campo1" type = "password" [(ngModel)] = "confirmar_senha" name = "confirmar_senha" placeholder = "Insira aqui"></ion-input><br><br>
-  <h5 class = "titulo1">Cidade</h5>
-</form>
-  <ion-select [(ngModel)] = "usuario.cidade" name = "cidade">
-    <ion-select-option *ngFor = 'let cidade of listaCidade | async' [value] = "cidade">{{cidade.nome}}</ion-select-option>
+  <br>
+
+  <form #meuFormulario="ngForm">
+
+    <ion-label position="floating">Email:</ion-label> <br>
+    <ion-input #nome="ngModel" type="text" [(ngModel)]="usuario.nome" name="nome" placeholder="Insira o nome aqui"
+      required></ion-input><br>
+
+    <span style='color:red; font-size: 10px; margin-left:140px; ' *ngIf="nome.errors && nome.touched">
+      <ion-label [hidden]='nome.error.required'>Esse campo é obrigatório!</ion-label>
+    </span>
+
+    <br>
+
+    <ion-label position="floating">Senha:</ion-label>
+    <ion-input class="campo2" #senha="ngModel" type="password" [(ngModel)]="usuario.senha" name="senha"
+      placeholder="Insira a senha aqui" required></ion-input>
+    <span style='color:red; font-size: 10px; margin-left:140px; ' *ngIf="senha.errors && senha.touched">
+      <ion-label [hidden]='senha.error.required'>Esse campo é obrigatório!</ion-label>
+    </span>
+    <br>
+    <ion-label position="floating">Confirme a Senha:</ion-label><br>
+    <ion-input #conf_senha="ngModel" class="campo1" type="password" [(ngModel)]="confirmar_senha" name="confirmar_senha"
+      placeholder="Insira aqui" required></ion-input>
+    <span style='color:red; font-size: 10px; margin-left:140px; ' *ngIf="conf_senha.errors && conf_senha.touched">
+      <ion-label [hidden]='conf_senha.error.required'>Esse campo é obrigatório!</ion-label>
+    </span><br>
+
+    <h5 class="titulo1">Cidade</h5>
+  </form>
+  <ion-select [(ngModel)]="usuario.cidade" name="cidade">
+    <ion-select-option *ngFor='let cidade of listaCidade | async' [value]="cidade">{{cidade.nome}}</ion-select-option>
   </ion-select>
-<ion-button (click) = "salvar()">Registrar</ion-button>
+  <ion-button [disabled]='!meuFormulario.form.valid' (click)="salvar()">Registrar</ion-button>
 
 </ion-content>
