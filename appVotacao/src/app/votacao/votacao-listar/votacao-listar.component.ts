@@ -28,7 +28,7 @@ export class VotacaoListarComponent implements OnInit {
   usuario : Usuario = new Usuario();
   user: any;
   botoes = [];
-  @Input() email : string;
+
   constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController, private autenticacao : AngularFireAuth, private modal : ModalController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
       map(lista => lista.map(linha => ({
@@ -78,6 +78,7 @@ async verResultado(votacao){
     this.menu.open();
   }
   ngOnInit() {
+    
     this.listadevotacoes.subscribe(
       votacao => {
         this.votacoes = votacao;
