@@ -27,7 +27,7 @@ export class VotacaoListarComponent implements OnInit {
   votacao: Votacao = new Votacao();
   usuario : Usuario = new Usuario();
   user: any;
-
+  senha_inserida : string;
 
   constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController, private autenticacao : AngularFireAuth, private modal : ModalController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
@@ -71,6 +71,26 @@ export class VotacaoListarComponent implements OnInit {
     });
     await alert.present();
   }
+
+  /*async verificarSenha(votacao){
+    const conf_senha = await this.alerta.create({
+      header : 'Digite a senha da Votação',
+      inputs : [{
+        type : "password",
+        id : "botao_id",
+        value : this.senha_inserida
+      }],
+      buttons : [{
+        text : 'Confirmar',
+        handler : () => {
+          if(this.senha_inserida == votacao.senha){
+            this.mostrarAlerta(votacao);
+          }
+        }
+      }]
+    });
+    await conf_senha.present();
+  }*/ //ainda não consigo implementar
 
 async alterarVotacao(votacao){
   const tela = await this.modal.create({
@@ -119,8 +139,12 @@ async verResultado(votacao){
   listarUsuarios() {
     this.router.navigate(['mostrar_usuarios']);
   }
-  excluir(key: string) {
-    this.banco.list('votacao').remove(key);
+  excluir(votacao) {
+    try{
+    this.banco.list('votacao').remove(votacao.key);
+    }catch(erro){
+      this.router.navigate(['votacoes']);
+    }
   }
 
 }
