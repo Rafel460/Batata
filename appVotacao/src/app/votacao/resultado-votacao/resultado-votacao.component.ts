@@ -14,8 +14,11 @@ votacao : Votacao = new Votacao();
 @Input() valor_1 : string;
 @Input() valor_2 : string;
 @Input() valor_3 : string;
+@Input() contador_1 : number;
+@Input() contador_2 : number;
+@Input() contador_3 : number;
   constructor(private banco : AngularFireDatabase, private modal : ModalController, private navParams : NavParams) {
-    console.log(navParams.get(this.valor_1));
+  
   }
 
   ngOnInit() {}

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Votacao } from '../entidade/votacao';
+import {Opcao} from '../entidade/opcao';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
 import {AlertController} from '@ionic/angular';
 import {ModalController} from '@ionic/angular';
+
 @Component({
   selector: 'app-votacao-salvar',
   templateUrl: './votacao-salvar.component.html',
@@ -11,8 +13,8 @@ import {ModalController} from '@ionic/angular';
 })
 export class VotacaoSalvarComponent  {
   votacao : Votacao = new Votacao();
-
-  constructor(private banco : AngularFireDatabase, private router : Router, private alerta : AlertController, private modal : ModalController) { }
+ 
+  constructor(private banco : AngularFireDatabase, private router : Router, private alerta : AlertController, private modal : ModalController) {}
 
   ngOnInit() {}
   async mostrarAlerta(){
@@ -25,6 +27,7 @@ export class VotacaoSalvarComponent  {
   }
   salvar(){
     if(this.votacao.key == null){
+ 
     this.banco.list('votacao').push(this.votacao);
     this.votacao = new Votacao();
     this.mostrarAlerta();

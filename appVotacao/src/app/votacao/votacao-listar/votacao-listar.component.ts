@@ -27,7 +27,7 @@ export class VotacaoListarComponent implements OnInit {
   votacao: Votacao = new Votacao();
   usuario : Usuario = new Usuario();
   user: any;
-  botoes = [];
+
 
   constructor(private banco: AngularFireDatabase, private router: Router, private menu: MenuController, private alerta: AlertController, private autenticacao : AngularFireAuth, private modal : ModalController) {
     this.listadevotacoes = this.banco.list<Votacao>('votacao').snapshotChanges().pipe(
@@ -39,20 +39,35 @@ export class VotacaoListarComponent implements OnInit {
   }
 
   async mostrarAlerta(votacao) {
-    this.botoes[0] = votacao.opcao_1;
-    this.botoes[1] = votacao.opcao_2;
-    this.botoes[2] = votacao.opcao_3; 
+
     const alert = await this.alerta.create({
       header: votacao.nome,
       subHeader: 'selecione uma das opções',
-      buttons: [this.botoes[0], this.botoes[1], this.botoes[2], 'Fechar'/*, {
-        handler : data => {
-          if(this.botoes[0]){ // se desse pra usar um switch seria melhor
-            //tem que achar um método que verifique que o botão foi clicado
-          }
+      buttons: [{
+        text : votacao.opcao_1.nome,
+        role : 'opcao_1',
+        handler : () => {
+         this.votacao.opcao_1.contador = this.votacao.opcao_1.contador + 1;
+         //this.banco.list('votacao').update(votacao.key, {contador : this.votacao.opcao_1.contador} ) -> tem que aprender a dar update de um registro de um registro
+          console.log(this.votacao.opcao_1.contador);
         }
-      }*/
-    ],
+      },{
+        text : votacao.opcao_2.nome,
+        role : 'opcao_2',
+        handler : () => {
+         this.votacao.opcao_2.contador = this.votacao.opcao_2.contador + 1;
+         //this.banco.list('votacao').update(votacao.key, {contador : this.votacao.opcao_1.contador} ) -> tem que aprender a dar update de um registro de um registro
+          console.log(this.votacao.opcao_2.contador);
+      }
+      },{text : votacao.opcao_3.nome,
+        role : 'opcao_3',
+        handler : () => {
+         this.votacao.opcao_3.contador = this.votacao.opcao_3.contador + 1;
+         //this.banco.list('votacao').update(votacao.key, {contador : this.votacao.opcao_1.contador} ) -> tem que aprender a dar update de um registro de um registro
+          console.log(this.votacao.opcao_3.contador);
+      }},{
+        text : 'Cancelar'
+      }]
     });
     await alert.present();
   }
@@ -67,9 +82,12 @@ async alterarVotacao(votacao){
 async verResultado(votacao){
   const resultado = await this.modal.create({
     component : ResultadoVotacaoComponent, componentProps : {
-      'valor_1' : votacao.opcao_1,
-      'valor_2' : votacao.opcao_2,
-      'valor_3' : votacao.opcao_3
+      'valor_1' : votacao.opcao_1.nome,
+      'contador_1' : votacao.opcao_1.contador,
+      'valor_2' : votacao.opcao_2.nome,
+      'contador_2' : votacao.opcao_2.contador,
+      'valor_3' : votacao.opcao_3.nome,
+      'contador_3' : votacao.opcao_3.contador
     }
   });
  resultado.present();
@@ -78,7 +96,6 @@ async verResultado(votacao){
     this.menu.open();
   }
   ngOnInit() {
-    
     this.listadevotacoes.subscribe(
       votacao => {
         this.votacoes = votacao;
